@@ -1,0 +1,23 @@
+     <%- include("partials/header") %>
+     <main>
+        <h1>Word Guess</h1>
+            
+        <form action="/words" method="GET">
+            <input type="text" name="q" value="">
+            <select name="sortDirection">
+                <option selected>asc</option>
+                <option>desc</option>
+            </select>
+            <button type="submit">GO</button>
+        </form>
+        <ul>
+            <% for (let i = 0; i < words.length; i++) { %>
+                <% if (words[i].length === 5) { %>
+                    <li><%= words[i] %></li>
+                <% } else { %>
+                    <li style="color: red;"><%= words[i] %></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </main>
+    <%- include("partials/footer") %>

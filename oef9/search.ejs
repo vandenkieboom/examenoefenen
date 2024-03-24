@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newspaper</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <form action="/search" method="get">
+            <input type="search" name="q" id="search">
+            <input type="submit" value="submit">
+        </form>
+    </header>
+
+    <main>
+        <% if (q) { %>
+            <% for (let i = 0; i < articles.length; i++) { %>
+                <article>
+                    <h1><%= articles[i].title %></h1>
+                    <p><%= articles[i].content %></p>
+                </article>
+            <% } %>
+        <% } %>
+    </main> 
+
+</body>
+</html>

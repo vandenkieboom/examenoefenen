@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(19, 19, 19);
+    padding: 1.7rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.7rem;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+article h1 {
+    margin-bottom: 10px;
+}
+
+article {
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+}
+
+input[type=search] {
+    padding: 0.5rem;
+    border-radius: 20px;
+    outline: none;
+    border: 1px black solid;
+    box-shadow: none;
+}
+
+input[type=submit] {
+    border-radius: 20px;
+    background-color: rgb(212, 212, 212);
+    padding: 0.4rem 1rem;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}

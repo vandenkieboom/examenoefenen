@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: rgb(189, 189, 189);
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            width: 20%;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            padding: 0.3rem;
+        }
+
+        input:focus,
+        textarea:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        input[type=submit] {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <% if (error) { %>
+            <p><%= error %></p>
+        <% } else { %>
+            <p><%= succes %></p>
+        <% } %>
+        <br>
+        <label for="fname">First name</label>
+        <input type="text" name="fname" id="fname">
+
+        <label for="lname">Last name</label>
+        <input type="text" name="lname" id="lname">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10">
+        </textarea>
+
+        <label for="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" value="agree">
+            I agree to the terms and conditions
+        </label>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
